@@ -39,6 +39,7 @@ intellij {
 
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins = properties("platformPlugins").map { it.split(',').map(String::trim).filter(String::isNotEmpty) }
+
 }
 
 // Configure Gradle Changelog Plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
@@ -116,4 +117,6 @@ tasks {
         // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
         channels = properties("pluginVersion").map { listOf(it.substringAfter('-', "").substringBefore('.').ifEmpty { "default" }) }
     }
+
+
 }

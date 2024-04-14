@@ -5,14 +5,16 @@
     <vendor>davidparry</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.intellij.groovy</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <resource-bundle>messages.TestFileBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.davidparry.intellijcreatetestfile.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.davidparry.intellijcreatetestfile.toolWindow.TestFolderWindowFactory" id="MyToolWindow"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.davidparry.intellijcreatetestfile.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <listener class="com.github.davidparry.intellijcreatetestfile.listeners.TestFolderActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
 </idea-plugin>
